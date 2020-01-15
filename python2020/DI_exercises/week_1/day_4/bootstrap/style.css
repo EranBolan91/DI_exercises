@@ -1,0 +1,33 @@
+h1{
+    font-weight: bold;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+h4{
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+h5{
+    font-weight: bold;
+}
+
+#content{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#background{
+    background-color: rgba(133, 128, 128, 0.377);
+    padding:30px;
+}
+
+#two{
+    margin-top: 100px;
+}
+
+.card{
+    margin-top: 8px;
+    margin-left: 30px;
+}

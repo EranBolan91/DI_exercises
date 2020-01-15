@@ -1,0 +1,40 @@
+html,body{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+#main {grid-area: main;}
+#pic {grid-area: pic;}
+#about {grid-area: about;}
+
+@media only screen and (min-width: 800px){
+
+    #container{
+        display: grid;
+        grid-template-areas:
+        "main main"
+        "pic about";
+        grid-gap: 5px;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+
+    #container{
+        display: grid;
+        grid-template-areas:
+        "main pic about";
+        grid-gap: 5px;
+    }
+    #pic{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+img{
+    height: 150px;
+    width: 150px;
+}
+

@@ -1,0 +1,99 @@
+#grid-box {grid-area: box;}
+#grid-surface {grid-area: surface;}
+#clear{grid-area: clear;}
+#red{grid-area: red;}
+#orange{grid-area: orange;}
+#yellow{grid-area: yellow;}
+#green{grid-area: green;}
+#blue{grid-area: blue;}
+#pink{grid-area: pink;}
+#black{grid-area: black;}
+#purple{grid-area: purple;}
+#lightgreen{grid-area: lightgreen;}
+#darkgrey{grid-area: darkgrey;}
+#aqua{grid-area: aqua;}
+#navy{grid-area: navy;}
+#blueviolet{grid-area: blueviolet;}
+#magenta{grid-area: magenta;}
+#brown{grid-area: brown;}
+#indianred{grid-area: indianred;}
+#peru{grid-area: peru;}
+#khaki{grid-area: khaki;}
+#forestgreen{grid-area: forestgreen;}
+#seagreen{grid-area: seagreen;}
+#steelblue{grid-area: steelblue;}
+
+#grid{
+    display: grid;
+    grid-template-areas: 
+    "box surface surface";
+}
+
+#grid-box{
+    display: grid;
+    grid-template-areas:
+    "clear clear clear"
+    "red darkgrey yellow"
+    "green blue pink"
+    "black purple lightgreen"
+    "orange aqua navy"
+    "blueviolet magenta brown"
+    "indianred peru khaki"
+    "forestgreen seagreen steelblue";
+    grid-gap: 10px;
+}
+
+.box{
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.clear{
+    height: 80px;
+    width: 100%;
+    border: 1px solid black;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    vertical-align: auto;
+}
+
+#grid-surface{
+    display: grid;
+    grid-template-columns:repeat(40,1fr);
+    grid-template-rows: repeat(20,1fr);
+    height: 100vh;
+    padding-left: 8px;
+}
+
+#grid-surface > * {
+	border: 1px lightgray solid;
+	background-color: white;
+}
+
+#red{ background-color: red;}
+#drakgrey { background-color: darkgray;}
+#yellow {background-color: yellow;}
+#green {background-color: green;}
+#blue {background-color:blue ;}
+#pink{background-color:pink ;}
+#black{background-color:black ;}
+#purple{background-color:purple ;}
+#lightgreen {background-color:lightgreen ;}
+#orange{background-color:orange ;}
+#aqua{background-color:aqua ;}
+#navy{background-color:navy ;}
+#blueviolet{background-color:blueviolet ;}
+#magenta{background-color:magenta ;}
+#brown{background-color:brown ;}
+#indianred{background-color:indianred ;}
+#peru{background-color:peru ;}
+#khaki{background-color:khaki ;}
+#forestgreen{background-color:forestgreen ;}
+#seagreen{background-color:seagreen ;}
+#steelblue{background-color:steelblue ;}
+
