@@ -20,6 +20,7 @@
 }
 
 .container{
+    margin-top: 60px;
     text-align: center;
 }
 
@@ -40,6 +41,35 @@
     background-color: #9ACD32;
     color: white;
     align-items: center;
+}
+
+.hr_gray{
+    border: 1px solid gray;
+    width: 5%;
+}
+
+.table_image{
+    width: 30px;
+    height: 30px;
+}
+
+.bg_gray{
+    background-color: rgba(128, 128, 128, 0.24);
+}
+
+.space_up{
+    padding-top: 30px;
+}
+
+.header_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.img_bottom{
+    width: 30px;
+    height: 30px;
 }
 
 
@@ -84,6 +114,7 @@ input[type=text], select {
 a{
     margin-left: 20px;
     margin-right: 15px;
+    
 }
 
 .navbar{
@@ -91,11 +122,16 @@ a{
     background: transparent !important;
 }
 
+
+
 .navbar-nav li:hover{
     border-bottom: 1.3px solid green;
 }
 
 li{
     font-weight: bold;
-    
+}
+
+.space_down{
+    margin-bottom: 50px;
 }
