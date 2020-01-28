@@ -35,3 +35,5 @@ var libButton = document.getElementById('lib-button');
         count++;
     };
     libButton.addEventListener('click', libIt);
+
+    /**Need to check why it doesn't replace ADJECTIVE and NOUN but NAME it does replace */
