@@ -1,0 +1,17 @@
+.title{
+  margin-left: 40px;
+}
+
+#student_list{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+}
