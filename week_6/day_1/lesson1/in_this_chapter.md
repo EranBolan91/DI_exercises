@@ -1,0 +1,1 @@
+In this lesson you will learn how to use JSON files and how to send/read JSON 
