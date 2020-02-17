@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <h2>Products:</h2>
+
+    {% for item in products_list %}
+    <h4> {{item['ProductPicUrl']}}</h4>
+    <h3> {{item['Name']}} </h3>
+    <h3>Price:  {{item['Price']}} {{item['CurrencyCode']}} </h3>
+    <h5> {{item['Description']}}</h5>
+    <h6> {{item['Quantity']}} {{item['Category']}} left!!</h6>
+<!--    <button type="submit" value="submit" name="ProductId" class="btn btn-success"> Check out</button>-->
+    <a class='btn btn-success' href="{{ url_for('product_display',id=item['ProductId']) }}">Check out</a>
+    {% endfor %}
+
+</body>
+</html>

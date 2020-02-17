@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="static/css/style.css" type="text/css" href="theme.css">
+    <title>Title</title>
+</head>
+<body>
+        <h3 id="headone">{{items_list[0]['title']}}</h3>
+        <h6>Date: {{items_list[0]['published']}}</h6>
+        <span> {{items_list[0]['description']}} </span>
+        <br>
+        <br>
+        <br>
+        <a href={{items_list[0]['links'][0]['href']}}>Click here for the article</a>
+
+</body>
+</html>
