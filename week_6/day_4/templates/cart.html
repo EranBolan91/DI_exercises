@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+  {% block content%}
+ <div class="container" id="cart_container">
+    {% for cart in carts %}
+      <div class="box card blue-grey darken-1">
+          <img class="img_size" src="{{cart.image}}">
+          <h4>Price: {{cart.price}} X {{cart.quantity}}</h4>
+          <a class="waves-effect waves-light btn-small" href="{{ url_for('cart_remove',cartid=cart.id) }}">
+              <i class="material-icons right">delete_outline</i>REMOVE</a>
+       </div>
+    {% endfor %}
+     <hr>
+        <h3 class="center-align">Total sum: {{total_sum}}</h3>
+  </div>
+  {% endblock %}

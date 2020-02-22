@@ -1,0 +1,41 @@
+{% extends 'index.html' %}
+
+{% block content %}
+<div class="row" >
+    <form method="POST" action="/register" class="col s12 m8" id="login_form">
+
+<!--        <div class="input-field col s12 m5">-->
+          <i class="material-icons prefix">account_circle</i>
+          {{form.name(class_="input-field col s12 m5")}}
+          <label>Full name</label>
+              {%if form.name.errors%}
+             {%for error in form.name.errors %}
+              {{error}}
+          {%endfor%}
+      {%endif%}
+<!--        </div>-->
+
+        <div class="input-field col s12 m5">
+          <i class="material-icons prefix">email</i>
+          {{form.email}}
+          <label>Email</label>
+        </div>
+
+        <div class="input-field col s12 m5">
+          <i class="material-icons prefix">lock</i>
+          {{form.password}}
+          <label>Password</label>
+        </div>
+
+        <div class="input-field col s12 m5">
+          <i class="material-icons prefix">lock</i>
+          {{form.confirm_password}}
+          <label>Confirm password</label>
+        </div>
+
+          <a type="submit" name="action" class="waves-effect waves-light btn-large col m5">
+              <i class="material-icons right">send</i>{{form.btn_submit}}</a>
+    </form>
+</div>
+
+{% endblock%}

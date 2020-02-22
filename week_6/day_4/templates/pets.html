@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+
+  {% block content%}
+ <div class="container wrapper">
+    {% for pet in pets %}
+      <div class="box card blue-grey darken-1">
+          <img class="img_size" src="{{pet.image}}">
+          <h3>{{pet.name}}</h3>
+          <h4>Price: {{pet.price}}</h4>
+          <p>{{pet.description}}</p>
+          <a class="waves-effect waves-light btn-small" href="{{ url_for('pet_display',petid=pet.id) }}">
+              <i class="material-icons right">info</i>check</a>
+       </div>
+    {% endfor %}
+  </div>
+  {% endblock %}

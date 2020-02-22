@@ -1,0 +1,36 @@
+.img_size{
+    height: 200px;
+    width: 200px;
+}
+
+.wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.box{
+    margin:30px;
+    border-style: inset;
+    padding:15px;
+    text-align: center;
+}
+
+#cart_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#login_form{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    margin-top:60px;
+}
+
+#flash_message{
+    background-color:red;
+}
