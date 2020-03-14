@@ -1,0 +1,68 @@
+{% extends 'index.html' %}
+    {% block head %}
+         {% block title%}
+           <title>Home1</title>
+         {% endblock %}
+    {% endblock %}
+{% block content%}
+
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<!--popup message-->
+<div id="btn_delete" class="modal">
+  <span onclick="document.getElementById('btn_delete').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content" action="/delete/{{film.id}}">
+    <div class="container">
+      <h1>Delete film</h1>
+      <p>Are you sure you want to delete the film?</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('btn_delete').style.display='none'" class="cancelbtn">Cancel</button>
+        <button  onclick="document.getElementById('btn_delete').style.display='none'" class="deletebtn">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+<div id="film_box">
+    {% if films %}
+    {% for film in films %}
+    <div class="card" style="width: 18rem;">
+        {% if film.image%}
+            <img src="{{ film.image.url }}" class="card-img-top" alt="...">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ film.title}}</h5>
+            <p class="card-text">{{ film.category_name }}</p>
+            <p class="card-text">{{ film.country_name }}</p>
+            <p class="card-text">{{ film.director }}</p>
+            <p class="card-text">{{ film.release_date }}</p>
+        </div>
+        <div class="card-body">
+            {% if request.user.is_superuser %}
+                <ul style="list-style:none;">
+                    <li><a href="{% url 'update_director' film.director_id %}" class="card-link">Modify the director</a>
+                    </li>
+                    <li><a href="{% url 'update_film' film.id %}" class="card-link">Modify the film</a></li>
+                    <li><a href="javascript:void(0);" data-href="{{ film.delete }}" class="deletePopup">Delete</a></li>
+                    <li><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                            DELETE</button>
+                    </li>
+                </ul>
+            {% endif %}
+        </div>
+    </div>
+     {% endfor %}
+    {% endif %}
+</div>
+
+
+{% endblock %}

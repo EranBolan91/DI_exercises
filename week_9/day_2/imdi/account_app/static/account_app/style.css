@@ -1,0 +1,12 @@
+.form{
+    margin-top:40px;
+    width:400px;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.btn_sub{
+    width:100%;
+}

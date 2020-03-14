@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+    {% block head %}
+         {% block title%}
+           <title>IMDI</title>
+         {% endblock %}
+    {% endblock %}
+
+{% block content%}
+    <form method="POST" class="form">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn_sub btn-primary">REGISTER</button>
+    </form>
+
+{% endblock %}

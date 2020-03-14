@@ -1,0 +1,15 @@
+#film_box{
+    display:flex;
+    flex-direction: row;
+    margin-top:50px;
+}
+
+img{
+    height:150px;
+}
+
+.card{
+    margin:8px;
+}
+
+

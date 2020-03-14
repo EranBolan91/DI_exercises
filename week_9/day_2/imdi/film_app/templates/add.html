@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+    {% block head %}
+         {% block title%}
+           <title>IMDI</title>
+         {% endblock %}
+    {% endblock %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="card">
+  <h5 class="card-header">Add Film or Director</h5>
+  <div class="card-body">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+            {{form|crispy}}
+<!--        need to ask why 'country' and 'category' are not shown when i use 'form.country/form.category'-->
+       <button type="submit" class="btn btn-primary">ADD</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
+
